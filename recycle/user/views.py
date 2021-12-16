@@ -32,39 +32,8 @@ def get_points(request):
 @api_view(['POST'])
 def post_user_info(request):
     """
-    전화번호, 포인트 저장
+    전화번호 -> 고객 정보 조회
     """
     pass
 
-# @api_view(['POST'])
-# def get_sum_points(request):
-#     """
-#     전화번호를 통한 최근의 sum_points 응답 ({"phone_number": "01000000000"} > {"sum_point": "0"})
-#     """
-#     try:
-#         user_phone = User.objects.get(phone_number=request.data['phone_number'])
-#         serializer = UserSerializer(user_phone)
-#         print(serializer.data)
-#         return Response({"sum_point": serializer.data['sum_points']})
-#     except User.DoesNotExist:
-#         return Response({"sum_point": "0"})
-#
-#
-# @api_view(['POST'])
-# def post_user_info(request):
-#     """
-#     전화번호, 포인트, 누적 포인트 저장 + 추후 카운트 추가
-#     """
-#     # request - 전화번호, 포인트만(serializer)
-#     # recent_date 시스템 날짜
-#     record = Record.objects.get()
-#         record.is_valid()
-#         Record.save()
-#
-#     serializer = RecordSerializer(data=request.data)
-#     if serializer.is_valid():
-#         serializer.save()
-#         return Response({"message": "success"})
-#     else:
-#         return Response({'message': 'error'})
 
